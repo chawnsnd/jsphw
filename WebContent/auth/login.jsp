@@ -15,7 +15,7 @@
 <%
 	String driver = "com.mysql.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/dankook?serverTimezone=UTC";
-	String id = "dankookdba";
+	String id = "dankook";
 	String password = "dankookpw";
 	String sql = "select * from student where student_id = ?";
 	Connection conn = null;

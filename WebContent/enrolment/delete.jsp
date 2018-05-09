@@ -11,7 +11,7 @@
 	int courseId = Integer.parseInt(request.getParameter("course_id"));
 	String driver = "com.mysql.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/dankook?serverTimezone=UTC";
-	String id = "dankookdba";
+	String id = "dankook";
 	String password = "dankookpw";
 	String sql = "delete from enrolment where student_id = ? and course_id = ?";
 	Connection conn = null;

@@ -11,7 +11,7 @@
 	authStudent = (AuthStudent)session.getAttribute("student");
 	String driver = "com.mysql.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/dankook?serverTimezone=UTC";
-	String id = "dankookdba";
+	String id = "dankook";
 	String password = "dankookpw";
 	String sql1 = "select * from course where course_id in (select course_id from enrolment where student_id = ?)";
 	String sql2 = "select * from course";
@@ -77,6 +77,7 @@
 </table>
 
 <h3>강의목록</h3>
+<h4>강의명 클릭 시 신청현황을 볼 수 있습니다.</h4>
 <table>
 	<tr>
 		<th>강의번호</th>
@@ -95,7 +96,7 @@
 %>
 	<tr>
 		<td><%=rs2.getString("course_id")%></td>
-		<td><%=rs2.getString("name")%></td>
+		<td><a href="../course/detail.jsp?course_id=<%= rs2.getString("course_id") %>"><%=rs2.getString("name")%></a></td>
 		<td><%=rs2.getString("department")%></td>
 		<td><%=rs2.getString("professor")%></td>
 		<td><%=rs2.getString("kind")%></td>
@@ -143,6 +144,10 @@ td{
 	text-align: center;
 }
 th{
+	background-color: grey;
+	color: white;
+}
+tr:hover{
 	background-color: #eaeaea;
 }
 </style>

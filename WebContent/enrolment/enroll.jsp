@@ -12,7 +12,7 @@
 	int courseId = Integer.parseInt(request.getParameter("course_id"));
 	String driver = "com.mysql.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/dankook?serverTimezone=UTC";
-	String id = "dankookdba";
+	String id = "dankook";
 	String password = "dankookpw";
 	String sql1 = "select course_id from enrolment where student_id = ?";
 	String sql2 = "insert into enrolment(student_id, course_id) values(?, ?)";
