@@ -2,6 +2,7 @@ package model;
 
 import java.time.DayOfWeek;
 import java.util.Arrays;
+import java.util.List;
 
 public class Course {
 	private int courseId;
@@ -9,8 +10,9 @@ public class Course {
 	private String department;
 	private String professor;
 	private String kind;
-	private DayOfWeek dayOfWeek;
-	private int[] time;
+	private String dayOfWeek;
+	private String time;
+	private List<Student> student;
 	
 	public int getCourseId() {
 		return courseId;
@@ -42,23 +44,29 @@ public class Course {
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
-	public DayOfWeek getDayOfWeek() {
+	public String getDayOfWeek() {
 		return dayOfWeek;
 	}
-	public void setDayOfWeek(DayOfWeek dayOfWeek) {
+	public void setDayOfWeek(String dayOfWeek) {
 		this.dayOfWeek = dayOfWeek;
 	}
-	public int[] getTime() {
+	public String getTime() {
 		return time;
 	}
-	public void setTime(int[] time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
-	
+	public List<Student> getStudent() {
+		return student;
+	}
+	public void setStudent(List<Student> student) {
+		this.student = student;
+	}
 	@Override
 	public String toString() {
 		return "Course [courseId=" + courseId + ", name=" + name + ", department=" + department + ", professor="
-				+ professor + ", kind=" + kind + ", dayOfWeek=" + dayOfWeek + ", time=" + Arrays.toString(time) + "]";
+				+ professor + ", kind=" + kind + ", dayOfWeek=" + dayOfWeek + ", time=" + time + ", student=" + student
+				+ "]";
 	}
 	
 }

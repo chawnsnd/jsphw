@@ -10,7 +10,7 @@ grant all privileges on dankook.* to  'dankook'@localhost identified by 'dankook
 grant all privileges on dankook.* to  'dankook'@'%' identified by 'dankookpw';
 
 -- DB 이동
-use database;
+use dankook;
 
 -- course 테이블 생성
 create table `course`(

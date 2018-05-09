@@ -12,7 +12,8 @@
 에러가 발생했어요ㅠㅠ<br> <br> 
 에러 타입 : <%= exception.getClass().getName() %><br> 
 에러 메세지 : <%= exception.getMessage() %><br> <br>
-관리자에게 연락주시면 보다 신속하게 해결하겠습니다.
+관리자에게 연락주시면 보다 신속하게 해결하겠습니다.<br><br>
 
+<a href="./index.jsp">메인화면으로</a>
 </body>
 </html>
